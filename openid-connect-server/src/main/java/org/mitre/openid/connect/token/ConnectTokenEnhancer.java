@@ -125,7 +125,7 @@ public class ConnectTokenEnhancer implements TokenEnhancer {
 
 				JWT idToken = connectTokenService.createIdToken(client,
 						originalAuthRequest, claims.getIssueTime(),
-						userInfo.getSub(), token);
+						userInfo.getEmail(), token);
 
 				// attach the id token to the parent access token
 				token.setIdToken(idToken);
